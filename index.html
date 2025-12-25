@@ -4,12 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>JARVIS - Just A Rather Very Intelligent System</title>
-        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Google Font -->
         <link
             href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Main Styles -->
+        <link rel="stylesheet" href="styles.css" />
     </head>
+
     <body>
         <div class="jarvis-container">
             <!-- Main Interface -->
@@ -22,10 +27,11 @@
                     </div>
                     <div class="system-time" id="systemTime"></div>
                 </div>
+
                 <!-- Core Interface -->
                 <div class="core-interface">
-                    <!--Main Display -->
-                    <div class="main display">
+                    <!-- Main Display (FIXED CLASS NAME) -->
+                    <div class="main-display">
                         <div class="jarvis-logo">
                             <div class="logo-ring ring-1"></div>
                             <div class="logo-ring ring-2"></div>
@@ -34,6 +40,7 @@
                                 <span>JARVIS</span>
                             </div>
                         </div>
+
                         <!-- Speech Recognition Indicator -->
                         <div class="speech-indicator" id="speechIndicator">
                             <div class="pulse-ring"></div>
@@ -41,6 +48,7 @@
                             <div class="pulse-ring delay-2"></div>
                             <div class="microphone-icon">🎤</div>
                         </div>
+
                         <!-- Wake Word Detection Indicator -->
                         <div
                             class="wake-word-indicator"
@@ -70,28 +78,47 @@
                         </div>
                         <div class="metric">
                             <span class="metric-label">Network</span>
-                            <span class="metric-value" id="networkStatus"
-                                >Online</span
-                            >
+                            <span class="metric-value" id="networkStatus">
+                                Online
+                            </span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Control Panel -->
                 <div class="control-panel">
-                    <button class="control-btn voice-btn" id="voiceBtn">
+                    <button
+                        class="control-btn voice-btn"
+                        id="voiceBtn"
+                        aria-label="Voice Command"
+                    >
                         <span class="btn-icon">🎤</span>
                         <span class="btn-text">Voice Command</span>
                     </button>
-                    <button class="control-btn search-btn" id="searchBtn">
+
+                    <button
+                        class="control-btn search-btn"
+                        id="searchBtn"
+                        aria-label="Web Search"
+                    >
                         <span class="btn-icon">🔍</span>
                         <span class="btn-text">Web Search</span>
                     </button>
-                    <button class="control-btn system-btn" id="systemBtn">
+
+                    <button
+                        class="control-btn system-btn"
+                        id="systemBtn"
+                        aria-label="System Info"
+                    >
                         <span class="btn-icon">⚙️</span>
                         <span class="btn-text">System Info</span>
                     </button>
-                    <button class="control-btn file-btn" id="fileBtn">
+
+                    <button
+                        class="control-btn file-btn"
+                        id="fileBtn"
+                        aria-label="File Manager"
+                    >
                         <span class="btn-icon">📁</span>
                         <span class="btn-text">File Manager</span>
                     </button>
@@ -179,12 +206,14 @@
                         ></div>
                     </div>
                 </div>
+
                 <div class="voice-indicator" id="confidenceIndicator">
                     <span>Confidence</span>
                     <span class="confidence-indicator" id="confidenceValue"
                         >0%</span
                     >
                 </div>
+
                 <div class="voice-indicator" id="commandFeedback">
                     <span id="commandFeedbackText"></span>
                 </div>
@@ -202,15 +231,16 @@
             </div>
         </div>
 
-        <!-- Scripts -->
-        <script src="jarvis-core.js"></script>
-        <script src="wake-word.js"></script>
-        <script src="enhanced-voice.js"></script>
-        <script src="animation-engine.js"></script>
-        <script src="error-handler.js"></script>
-        <script src="mobile-optimizer.js"></script>
-        <script src="speech-handler.js"></script>
-        <script src="ui-manager.js"></script>
-        <script src="system-monitor.js"></script>
+        <!-- Scripts (DEFERRED) -->
+        <script src="jarvis-core.js" defer></script>
+        <script src="wake-word.js" defer></script>
+        <script src="enhanced-voice.js" defer></script>
+        <script src="animation-engine.js" defer></script>
+        <script src="error-handler.js" defer></script>
+        <script src="mobile-optimizer.js" defer></script>
+        <script src="speech-handler.js" defer></script>
+        <script src="ui-manager.js" defer></script>
+        <script src="system-monitor.js" defer></script>
     </body>
 </html>
+.
